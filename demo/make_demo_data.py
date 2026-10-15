@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-SAMPLES = [("colon_D1", "colon"), ("liver_A1", "liver")]
+SAMPLES = [("sample_A", "colon"), ("sample_B", "liver")]
 
 
 def make_tables(root):
@@ -56,8 +56,8 @@ def make_tables(root):
 
     # marker QC, cluster labels, per-sample consensus
     pd.DataFrame([
-        {"sample": "colon_D1", "tier_A_or_B_fraction": 0.804},
-        {"sample": "liver_A1", "tier_A_or_B_fraction": 0.795},
+        {"sample": "sample_A", "tier_A_or_B_fraction": 0.804},
+        {"sample": "sample_B", "tier_A_or_B_fraction": 0.795},
     ]).to_csv(root / "results/tables/cell_annotation/marker_evidence_qc.tsv", sep="\t", index=False)
 
     labels = []
@@ -141,8 +141,8 @@ def make_figures(root):
 
     # QC distributions
     fig, ax = plt.subplots(figsize=(10, 3.6))
-    ax.hist(rng.normal(1500, 500, 2000).clip(0), bins=60, color="#1F3A4D", alpha=0.75, label="colon_D1")
-    ax.hist(rng.normal(1000, 400, 2000).clip(0), bins=60, color="#B5651D", alpha=0.6, label="liver_A1")
+    ax.hist(rng.normal(1500, 500, 2000).clip(0), bins=60, color="#1F3A4D", alpha=0.75, label="sample_A")
+    ax.hist(rng.normal(1000, 400, 2000).clip(0), bins=60, color="#B5651D", alpha=0.6, label="sample_B")
     ax.set_title("Demo UMI per segmented cell"); ax.legend()
     fig.tight_layout(); fig.savefig(fig_dir / "audit/cell_qc_distributions.png", dpi=110); plt.close(fig)
 
@@ -219,9 +219,9 @@ def main():
     make_figures(root)
     (root / "report/report_config.json").write_text(
         json.dumps({
-            "samples": ["colon_D1", "liver_A1"],
-            "display_names": {"colon_D1": "结肠原发灶（colon_D1）", "liver_A1": "肝原发肿瘤（liver_A1）"},
-            "sample_dirs": {"colon_D1": "colon", "liver_A1": "liver"},
+            "samples": ["sample_A", "sample_B"],
+            "display_names": {"sample_A": "样本 A（原发灶，演示）", "sample_B": "样本 B（肝原发肿瘤，演示）"},
+            "sample_dirs": {"sample_A": "colon", "sample_B": "liver"},
             "report_version": "demo",
             "tissue_vocab": {"CRC": {"forbidden_markers": ["colon", "结肠", "结直肠", "CRC"]}},
         }, ensure_ascii=False, indent=2), encoding="utf-8")

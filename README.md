@@ -9,6 +9,15 @@
 > 触发场景：你拿到了 Space Ranger `outs/` 目录、或提到“空转 / Visium / 空间转录组”，
 > 想“注释一下 / 出个报告 / 做个 PPT 汇报”。
 
+![完整流水线](docs/images/framework.png)
+
+> 下列截图来自 `demo/`（合成数据，非真实病例）。
+
+| HTML 报告（单文件自包含） | PPT（结论优先，18 页） |
+|---|---|
+| ![封面](docs/images/html-cover.png) | ![PPT 封面](docs/images/ppt-slide01.png) |
+| ![执行摘要](docs/images/html-exec.png) | ![细胞地图页](docs/images/ppt-slide07.png) |
+
 ---
 
 ## 它能做什么
@@ -122,6 +131,8 @@ scripts/     collect_results.py / build_html_report.py / build_ppt_leader.py
              validate_report.py / plot_consensus_panels.py / report_common.py
 templates/   report_config.example.json + 词典模板（ontology / gmt / params）
 demo/        make_demo_data.py + 生成的最小可运行示例
+examples/    crc-liver-case/ 真实交付的脱敏归档（无患者信息、无院内路径）
+docs/        框架图与 demo 截图（make_framework.py / make_screenshots.py）
 SKILL.md     ★ 完整能力说明（阶段详解、报告结构模板、常见坑）
 ```
 

@@ -176,7 +176,7 @@ def build(root, out_path):
     immune = json.loads((root / "results/tables/cell_annotation/immune_tme_summary.json").read_text(encoding="utf-8"))
     subtype = json.loads((root / "results/tables/cell_annotation/immune_subtype_summary.json").read_text(encoding="utf-8"))
 
-    samples = cfg.get("samples", ["colon_D1", "liver_A1"])
+    samples = cfg.get("samples", ["sample_A", "sample_B"])
     a_id, b_id = samples[0], samples[1]
     names = cfg.get("display_names", {})
     a_name, b_name = names.get(a_id, a_id), names.get(b_id, b_id)

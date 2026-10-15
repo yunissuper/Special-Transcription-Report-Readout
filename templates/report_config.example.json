@@ -1,14 +1,14 @@
 {
   "_comment": "Copy to <project>/report/report_config.json and edit. Every key is optional; the scripts fall back to the conventional layout in SKILL.md section 2.",
 
-  "samples": ["colon_D1", "liver_A1"],
+  "samples": ["sample_A", "sample_B"],
   "display_names": {
-    "colon_D1": "结肠原发灶（colon_D1）",
-    "liver_A1": "肝原发肿瘤（liver_A1，HCC/ICC 待定）"
+    "sample_A": "原发灶（sample_A）",
+    "sample_B": "肝原发肿瘤（sample_B，HCC/ICC 待定）"
   },
   "sample_dirs": {
-    "colon_D1": "colon",
-    "liver_A1": "liver"
+    "sample_A": "colon",
+    "sample_B": "liver"
   },
   "cover_title": "两份临床组织切片的空间转录组分析报告",
 

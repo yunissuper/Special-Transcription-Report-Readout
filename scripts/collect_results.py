@@ -28,8 +28,8 @@ def records(frame):
 
 
 DEFAULTS = {
-    "samples": ["colon_D1", "liver_A1"],
-    "sample_dirs": {"colon_D1": "colon", "liver_A1": "liver"},
+    "samples": ["sample_A", "sample_B"],
+    "sample_dirs": {"sample_A": "colon", "sample_B": "liver"},
     "display_names": {},
     "report_version": "auto",
     "tables": {

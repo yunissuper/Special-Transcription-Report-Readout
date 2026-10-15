@@ -62,31 +62,30 @@ MAJOR_LABELS = {
 }
 
 MALIGN_STATUS_LABELS = {
-    "CRC malignant candidate - disease reference and CRC marker supported; pathology/CNV pending": "结肠恶性上皮候选（参考+marker支持，病理/CNV待定）",
-    "Non-malignant colon epithelium supported": "非恶性结肠上皮（已支持）",
-    "Indeterminate epithelial - insufficient malignant evidence": "上皮·待定（恶性证据不足）",
-    "Indeterminate epithelial - pathology/CNV pending": "上皮·待定（病理/CNV待定）",
-    "Liver cancer epithelium candidate - hepatocyte-lineage epithelial identity with liver-cancer reference support; HCC-vs-ICC subtype and pathology/CNV not resolved, spatial tumour boundary not established": "肝癌上皮候选（肝细胞谱系，HCC/ICC待定）",
-    "Non-malignant hepatocyte supported": "非恶性肝细胞（已支持）",
-    "Non-malignant cholangiocyte supported": "非恶性胆管细胞（已支持）",
-    "Indeterminate liver epithelium - neoplastic signal without a hepatocyte/biliary identity program": "肝上皮·待定（有肿瘤信号，无肝细胞/胆管身份）",
-    "Indeterminate epithelial - liver tumour subtype and pathology/CNV pending": "肝上皮·待定（亚型与病理/CNV待定）",
-    "Not applicable - non-epithelial": "非上皮（不适用）",
-    "Not assessed - compartment unresolved": "未评估（分区未定）",
+    "CRC malignant candidate - disease reference and CRC marker supported; pathology/CNV pending": "结肠恶性候选",
+    "Non-malignant colon epithelium supported": "正常结肠上皮",
+    "Indeterminate epithelial - insufficient malignant evidence": "上皮·待定",
+    "Indeterminate epithelial - pathology/CNV pending": "上皮·待定(病理)",
+    "Liver cancer epithelium candidate - hepatocyte-lineage epithelial identity with liver-cancer reference support; HCC-vs-ICC subtype and pathology/CNV not resolved, spatial tumour boundary not established": "肝癌候选",
+    "Non-malignant hepatocyte supported": "非恶性肝细胞",
+    "Non-malignant cholangiocyte supported": "非恶性胆管",
+    "Indeterminate liver epithelium - neoplastic signal without a hepatocyte/biliary identity program": "肝上皮·待定",
+    "Indeterminate epithelial - liver tumour subtype and pathology/CNV pending": "上皮·待定(病理)",
+    "Not applicable - non-epithelial": "非上皮",
+    "Not assessed - compartment unresolved": "未评估",
 }
 
 MALIGN_COLORS = {
-    "结肠恶性上皮候选（参考+marker支持，病理/CNV待定）": "#b2182b",
-    "肝癌上皮候选（肝细胞谱系，HCC/ICC待定）": "#b2182b",
-    "非恶性结肠上皮（已支持）": "#2166ac",
-    "非恶性肝细胞（已支持）": "#1b7837",
-    "非恶性胆管细胞（已支持）": "#238b45",
-    "上皮·待定（恶性证据不足）": "#ef8a62",
-    "上皮·待定（病理/CNV待定）": "#fddbc7",
-    "肝上皮·待定（有肿瘤信号，无肝细胞/胆管身份）": "#ef8a62",
-    "肝上皮·待定（亚型与病理/CNV待定）": "#fddbc7",
-    "非上皮（不适用）": "#bdbdbd",
-    "未评估（分区未定）": "#e6e6e6",
+    "结肠恶性候选": "#b2182b",
+    "肝癌候选": "#b2182b",
+    "正常结肠上皮": "#2166ac",
+    "非恶性肝细胞": "#1b7837",
+    "非恶性胆管": "#238b45",
+    "上皮·待定": "#ef8a62",
+    "上皮·待定(病理)": "#fddbc7",
+    "肝上皮·待定": "#ef8a62",
+    "非上皮": "#bdbdbd",
+    "未评估": "#e6e6e6",
 }
 
 MAJOR_PALETTE = [
@@ -127,9 +126,15 @@ def add_legend_below(axis, handles, ncol=2, fontsize=7.5):
 
 def make_panel(frame, column, label_map, colors, title, out_path,
                legend_ncol=2, legend_font=8.0, top_n=None):
+    """One map on top, its colour legend below -- saved as a standalone image.
+
+    The map takes ~85% of the height; keep legend names SHORT (<=2 rows) so the
+    tissue never gets squeezed. Sentence-length names are the main cause of an
+    unreadable map once the panel lands in a slide.
+    """
     import matplotlib.patches as mpatches
     figure = plt.figure(figsize=(5.0, 6.0))
-    grid = figure.add_gridspec(2, 1, height_ratios=[5.6, 1.7], hspace=0.02)
+    grid = figure.add_gridspec(2, 1, height_ratios=[7.2, 1.0], hspace=0.02)
     axis = figure.add_subplot(grid[0])
     legend_axis = figure.add_subplot(grid[1])
     legend_axis.axis("off")
@@ -181,7 +186,7 @@ def main():
                "② 主要细胞类型 Major cell type", f"{stem}_2_major.png", legend_ncol=2)
     make_panel(frame, args.malign_column, MALIGN_STATUS_LABELS, MALIGN_COLORS,
                "③ 上皮恶性证据 Epithelial malignancy", f"{stem}_3_malignancy.png",
-               legend_ncol=1, legend_font=7.5)
+               legend_ncol=2, legend_font=7.5)
 
     figure, axes = plt.subplots(1, 3, figsize=(16.5, 6.6))
     h0 = draw_panel(axes[0], frame, "consensus_compartment", COMPARTMENT_LABELS, COMPARTMENT_COLORS)
