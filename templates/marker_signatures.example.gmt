@@ -1,0 +1,35 @@
+Pan_Epithelial	pan epithelial program	EPCAM	KRT8	KRT18	KRT19	KRT7	KRT20	TACSTD2	MSLN	MUC1	CLDN3	CLDN4
+CRC_Epithelial	CRC epithelial candidate program	CEACAM5	CEACAM6	EPCAM	KRT20	KRT19	CLDN3	CLDN4	CLDN7	AGR2	SOX9	CDX2	OLFM4	TACSTD2	MUC1
+Colon_Enterocyte	mature intestinal absorptive epithelium	CA1	CA2	FABP1	FABP2	SI	ALDOB	APOA1	APOA4	KRT20	SLC26A3	BEST4	OTOP2
+Colon_Goblet	goblet secretory epithelium	MUC2	CLCA1	SPINK4	FCGBP	TFF3	AGR2	ZG16	AQP8
+Colon_Stem_TA	intestinal stem and transit-amplifying program	LGR5	OLFM4	SMOC2	SOX9	ASCL2	MKI67	TOP2A	TUBA1B
+Hepatocyte	hepatocyte identity	ALB	TTR	APOA1	APOA2	CPS1	ASGR1	HNF4A	CYP2E1	CYP3A4	FGA	FGB	FGG
+Cholangiocyte	biliary epithelial identity	KRT19	KRT7	EPCAM	KRT8	KRT18	KRT17	SOX9	MSLN	KRT23	SPP1
+T_cell	T lymphocyte identity	CD3D	CD3E	CD3G	TRBC1	TRBC2	LTB	IL7R	CCL5
+CD8_Cytotoxic_T	cytotoxic T-cell program	CD3D	CD3E	CD8A	CD8B	CCL5	NKG7	PRF1	GZMK	GZMB
+Treg	regulatory T-cell program	FOXP3	IL2RA	CTLA4	TIGIT	IKZF2	CCR8	TNFRSF18
+NK_cell	natural killer cell identity	NKG7	GNLY	KLRD1	KLRF1	PRF1	GZMB	FCGR3A	TRDC
+B_cell	B lymphocyte identity	CD79A	MS4A1	CD37	CD74	HLA-DRA	CD22	CD19	BANK1	CD83
+Plasma_cell	antibody-secreting plasma cell program	MZB1	JCHAIN	IGKC	SDC1	DERL3	XBP1	SEC11C	TNFRSF17
+Myeloid	pan myeloid identity	LST1	TYROBP	FCER1G	CTSS	AIF1	LILRB1	SPI1	LYZ
+Monocyte	inflammatory and classical monocyte program	FCN1	VCAN	S100A8	S100A9	S100A12	CTSS	LYZ	LILRB1
+Macrophage	macrophage identity	C1QA	C1QB	C1QC	APOE	CD68	MERTK	MARCO	MSR1	CD163
+SPP1_Macrophage	SPP1 tumor-associated macrophage program	SPP1	APOC1	GPNMB	TREM2	LGALS3	CTSB	CTSD	FABP5
+C1QC_Macrophage	resident and C1QC macrophage program	C1QA	C1QB	C1QC	FOLR2	LYVE1	MRC1	CD163	VSIG4
+Dendritic_cell	conventional dendritic cell program	FCER1A	CD1C	CLEC10A	HLA-DRA	CST3	CLEC9A	BATF3	XCR1
+Neutrophil	neutrophil granulocyte program	FCGR3B	CSF3R	S100A8	S100A9	S100A12	CXCR2	MNDA	FPR1
+Fibroblast	pan fibroblast identity	COL1A1	COL1A2	DCN	COL3A1	LUM	PDGFRA	COL6A1	COL6A2
+myCAF	myofibroblastic CAF program	ACTA2	TAGLN	MYL9	TPM2	COL1A1	COL3A1	POSTN	SPARC	THY1
+inflammatory_CAF	inflammatory and matrix-remodeling CAF program	CXCL12	IL6	CXCL14	CFD	C7	C3	COL14A1	PI16	DPT
+Hepatic_Stellate	hepatic stellate cell program	COL1A1	COL3A1	RBP1	LRAT	CYGB	DES	PDGFRA	COL15A1
+Pericyte	pericyte identity	RGS5	CSPG4	MCAM	PDGFRB	ABCC9	KCNJ8	DES	NOTCH3
+VSMC	vascular smooth-muscle program	ACTA2	MYH11	TAGLN	CNN1	SMTN	MYL9	TPM2
+Endothelial	pan vascular endothelial identity	PECAM1	EMCN	VWF	KDR	ESAM	ENG	CDH5	RAMP2
+LSEC	liver sinusoidal endothelial program	CLEC4G	CLEC4M	FCGR2B	STAB1	STAB2	LYVE1	KDR	PECAM1	PLVAP
+Lymphatic_Endothelial	lymphatic endothelial program	PDPN	LYVE1	CCL21	FLT4	PROX1	EMCN
+Proliferation	cell-cycle proliferation program	MKI67	TOP2A	UBE2C	BIRC5	CENPF	TYMS	STMN1	TUBA1B
+EMT	epithelial-mesenchymal transition program	VIM	FN1	SNAI1	SNAI2	ZEB1	ZEB2	TGFBI	COL1A1	COL3A1	ITGA5
+Hypoxia	hypoxia response program	CA9	VEGFA	BNIP3	NDRG1	ENO1	LDHA	SLC2A1	PGK1	ADM
+Cytotoxicity	cytotoxic lymphocyte effector program	NKG7	GNLY	PRF1	GZMB	GZMH	CCL5	CTSW	KLRD1
+T_Exhaustion	T-cell dysfunction and exhaustion program	PDCD1	CTLA4	LAG3	HAVCR2	TIGIT	TOX	CXCL13	ENTPD1
+Angiogenesis	angiogenic endothelial program	KDR	ESM1	ANGPT2	PLVAP	VWF	PECAM1	ENG	RAMP2	VEGFA

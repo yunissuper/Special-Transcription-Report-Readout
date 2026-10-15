@@ -1,0 +1,22 @@
+{
+  "method": "UCell rank-based marker scoring",
+  "ucell_version": "2.6.2",
+  "max_rank": 1500,
+  "signature_file": "annotation/cell_level/marker_signatures.gmt",
+  "identity_calling": {
+    "tier_A": "top_score >= 0.25 and top_minus_second >= 0.05",
+    "tier_B": "top_score >= 0.15 and top_minus_second >= 0.02, excluding Tier A",
+    "tier_C": "all remaining cells; supported label is Unknown"
+  },
+  "interpretation": "Marker evidence is an independent support layer and cannot by itself establish malignant identity or a fine subtype.",
+  "observed_validation": {
+    "colon_D1": {
+      "tier_A_or_B_fraction": 0.8041070378357185,
+      "azimuth_compartment_agreement_among_supported": 0.7669756876227898
+    },
+    "liver_A1": {
+      "tier_A_or_B_fraction": 0.7952093629665565,
+      "azimuth_compartment_agreement_among_supported": 0.8175541342374971
+    }
+  }
+}

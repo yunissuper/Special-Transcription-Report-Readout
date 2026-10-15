@@ -1,0 +1,36 @@
+program	compartment	major_cell_type	cell_subtype_or_state	evidence_role	applicable_tissue
+Pan_Epithelial	Epithelial	Epithelial	Pan epithelial	identity	colon;liver
+CRC_Epithelial	Epithelial	CRC epithelial candidate	CRC epithelial candidate	identity	colon;liver
+Colon_Enterocyte	Epithelial	Intestinal epithelial	Enterocyte	identity	colon
+Colon_Goblet	Epithelial	Intestinal epithelial	Goblet	identity	colon
+Colon_Stem_TA	Epithelial	Intestinal epithelial	Stem/TA	identity	colon
+Hepatocyte	Epithelial	Hepatocyte	Hepatocyte	identity	liver
+Cholangiocyte	Epithelial	Cholangiocyte	Cholangiocyte	identity	liver
+T_cell	Immune	T cell	T cell	identity	colon;liver
+CD8_Cytotoxic_T	Immune	T cell	CD8/cytotoxic T	identity	colon;liver
+Treg	Immune	T cell	Regulatory T	identity	colon;liver
+NK_cell	Immune	NK cell	NK cell	identity	colon;liver
+B_cell	Immune	B cell	B cell	identity	colon;liver
+Plasma_cell	Immune	Plasma cell	Plasma cell	identity	colon;liver
+Myeloid	Immune	Myeloid	Pan myeloid	identity	colon;liver
+Monocyte	Immune	Myeloid	Monocyte	identity	colon;liver
+Macrophage	Immune	Macrophage	Macrophage	identity	colon;liver
+SPP1_Macrophage	Immune	Macrophage	SPP1 macrophage	identity	colon;liver
+C1QC_Macrophage	Immune	Macrophage	C1QC macrophage	identity	colon;liver
+Dendritic_cell	Immune	Dendritic cell	Dendritic cell	identity	colon;liver
+Neutrophil	Immune	Neutrophil	Neutrophil	identity	colon;liver
+Fibroblast	Stromal	Fibroblast	Fibroblast	identity	colon;liver
+myCAF	Stromal	Fibroblast	myCAF	identity	colon;liver
+inflammatory_CAF	Stromal	Fibroblast	Inflammatory CAF	identity	colon;liver
+Hepatic_Stellate	Stromal	Hepatic stellate cell	Hepatic stellate cell	identity	liver
+Pericyte	Stromal	Pericyte	Pericyte	identity	colon;liver
+VSMC	Stromal	VSMC	Vascular smooth muscle	identity	colon;liver
+Endothelial	Endothelial	Endothelial	Vascular endothelial	identity	colon;liver
+LSEC	Endothelial	Endothelial	LSEC	identity	liver
+Lymphatic_Endothelial	Endothelial	Endothelial	Lymphatic endothelial	identity	colon;liver
+Proliferation	State	NA	Proliferation	state	colon;liver
+EMT	State	NA	EMT	state	colon;liver
+Hypoxia	State	NA	Hypoxia	state	colon;liver
+Cytotoxicity	State	NA	Cytotoxicity	state	colon;liver
+T_Exhaustion	State	NA	T-cell exhaustion	state	colon;liver
+Angiogenesis	State	NA	Angiogenesis	state	colon;liver

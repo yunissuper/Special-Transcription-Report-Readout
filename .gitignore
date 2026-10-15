@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Demo outputs (regenerate with demo/make_demo_data.py)
+demo/project/
+
+# Generated deliverables
+*.pptx
+*.pdf
+report/report_leader.html
+report/report_data_current.json
+
+# Large data / analysis inputs are never committed
+*.h5
+*.h5ad
+*.rds
+*.tif
+*.tiff
+*.bam
+*.fastq
+*.fastq.gz
+raw/
+inputs_readonly/
+baseline_readonly/
+work/
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

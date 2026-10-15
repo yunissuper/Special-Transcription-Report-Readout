@@ -1,0 +1,69 @@
+{
+  "_comment": "Copy to <project>/report/report_config.json and edit. Every key is optional; the scripts fall back to the conventional layout in SKILL.md section 2.",
+
+  "samples": ["colon_D1", "liver_A1"],
+  "display_names": {
+    "colon_D1": "结肠原发灶（colon_D1）",
+    "liver_A1": "肝原发肿瘤（liver_A1，HCC/ICC 待定）"
+  },
+  "sample_dirs": {
+    "colon_D1": "colon",
+    "liver_A1": "liver"
+  },
+  "cover_title": "两份临床组织切片的空间转录组分析报告",
+
+  "report_version": "最终版（disease-reference 重注释 + 全量 RCTD）",
+
+  "tables": {
+    "audit": "results/tables/baseline_audit_summary.tsv",
+    "marker_qc": "results/tables/cell_annotation/marker_evidence_qc.tsv",
+    "consensus_qc": "results/tables/cell_annotation/current_disease_consensus_qc.tsv",
+    "cluster_labels": "results/tables/bin8um_validation/combined_cluster_labels_current.tsv",
+    "cluster_labels_rctd": "results/tables/bin8um_validation/combined_cluster_labels_rctd_current.tsv",
+    "cell_to_cluster_qc": [
+      "results/tables/bin8um_validation/colon_cell_to_cluster_qc.tsv",
+      "results/tables/bin8um_validation/liver_cell_to_cluster_qc.tsv"
+    ],
+    "reference_manifest": "annotation/references/manifest.tsv",
+    "dryrun_summary": "provenance/dryrun/dryrun_summary.json",
+    "rctd_summary": "results/tables/bin8um_validation/rctd_full/rctd_full_summary.json"
+  },
+
+  "consensus_tables": {
+    "colon": "results/tables/cell_annotation/colon_disease_consensus_current.tsv.gz",
+    "liver": "results/tables/cell_annotation/liver_disease_consensus_current.tsv.gz"
+  },
+
+  "reference_evidence": {
+    "colon": "results/tables/cell_annotation/colon_reference_evidence_summary.tsv",
+    "liver": "results/tables/cell_annotation/liver_reference_evidence_summary.tsv"
+  },
+
+  "figures": {
+    "cell_qc": "results/figures/audit/cell_qc_distributions.png",
+    "azimuth_qc": "results/figures/audit/azimuth_confidence_distributions.png",
+    "colon_marker": "results/figures/cell_annotation/colon_marker_evidence_spatial.png",
+    "liver_marker": "results/figures/cell_annotation/liver_marker_evidence_spatial.png",
+    "colon_ucell": "results/figures/cell_annotation/colon_ucell_programs.png",
+    "liver_ucell": "results/figures/cell_annotation/liver_ucell_programs.png",
+    "colon_consensus": "results/figures/cell_annotation/colon_disease_consensus_current_spatial.png",
+    "liver_consensus": "results/figures/cell_annotation/liver_disease_consensus_current_spatial.png",
+    "colon_clusters": "results/figures/bin8um_validation/colon_cluster_composition_current.png",
+    "liver_clusters": "results/figures/bin8um_validation/liver_cluster_composition_current.png",
+    "rctd_clusters": "results/figures/bin8um_validation/rctd_full_cluster_validation.png"
+  },
+
+  "action_rows": [
+    ["P0", "空间蛋白组验证肿瘤候选与免疫微环境（首选）", "同一连续切片做蛋白组，直接验证", "1–2 个月", "中高"],
+    ["P0", "病理科复核候选富集区域（HE/免疫组化）", "确认肿瘤范围与样本谱系", "2–4 周", "低"],
+    ["P1", "CNV 分析复核肿瘤候选", "与表达证据互补", "2–4 周", "低"],
+    ["P1", "多重免疫组化：CD8 / PD-L1 / 巨噬极化", "验证免疫浸润结论", "4–6 周", "低"],
+    ["P2", "候选区域单细胞解离测序", "深入免疫/肿瘤状态", "2–3 个月", "中高"]
+  ],
+
+  "_tissue_vocab_comment": "Guard against 'wrong reference reused': any slide containing term must also contain at least one of its markers (its own tissue). A slide that is liver-only must never carry the colon term.",
+  "tissue_vocab": {
+    "CRC": { "forbidden_markers": ["colon", "结肠", "结直肠"] },
+    "CRLM": { "forbidden_markers": ["colon", "结肠", "结直肠"] }
+  }
+}
